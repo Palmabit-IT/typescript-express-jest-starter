@@ -1,6 +1,8 @@
 import express from "express"
+import { Request, Response, NextFunction } from 'express';
 import helmet from 'helmet'
 import morgan from 'morgan'
+import errorHandler from './errorHandler'
 
 const app = express()
 
@@ -10,6 +12,8 @@ app.use(morgan('dev'))
 
 app.listen(8000, () => console.log("Server running on 8000!!!"))
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response, next: NextFunction) => {
   res.send('Hello World')
 })
+
+app.use(errorHandler)
