@@ -1,5 +1,4 @@
 import express from "express"
-import { Request, Response, NextFunction } from 'express';
 import helmet from 'helmet'
 import morgan from 'morgan'
 import errorHandler from './errorHandler'
