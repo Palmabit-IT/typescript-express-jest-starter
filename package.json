@@ -12,10 +12,12 @@
   "author": "Fleetmatica srl",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "helmet": "^3.13.0"
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
+    "@types/helmet": "^0.0.38",
     "@types/jest": "^23.3.1",
     "jest": "^23.4.1",
     "nodemon": "^1.18.3",
