@@ -2,6 +2,7 @@ import express from "express"
 import helmet from 'helmet'
 import morgan from 'morgan'
 import compression from 'compression'
+import bodyParser, { OptionsJson } from 'body-parser'
 import errorHandler from './errorHandler'
 
 // Routes
@@ -13,6 +14,13 @@ const app = express()
 app.use(helmet())
 app.use(morgan('dev'))
 app.use(compression())
+
+// BodyParser
+const optionsJson: OptionsJson = {
+  limit: 1,
+  strict: true, // When set to true, will only accept arrays and objects; when false will accept anything JSON.parse accepts
+}
+app.use(bodyParser.json(optionsJson)); // for parsing application/json
 
 // Load routes
 app.use('/', index)
