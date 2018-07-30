@@ -4,9 +4,7 @@ import morgan from 'morgan'
 import compression from 'compression'
 import bodyParser, { OptionsJson } from 'body-parser'
 import errorHandler from './errorHandler'
-
-// Routes
-import index from './routes/index'
+import { load as loadRoutes } from './routes'
 
 const app = express()
 
@@ -23,7 +21,7 @@ const optionsJson: OptionsJson = {
 app.use(bodyParser.json(optionsJson)); // for parsing application/json
 
 // Load routes
-app.use('/', index)
+loadRoutes(app)
 
 app.listen(8000, () => console.log("Server running on 8000!!!"))
 
