@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node --inspect -r ts-node/register index.ts",
     "dev": "nodemon",
-    "test": "jest --env=node",
+    "test": "jest --env=node --coverage",
     "test:watch": "jest --watch"
   },
   "author": "Fleetmatica srl",
@@ -33,15 +33,19 @@
     "typescript": "^2.9.2"
   },
   "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js",
       "json"
-    ]
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "verbose": true
   }
 }
