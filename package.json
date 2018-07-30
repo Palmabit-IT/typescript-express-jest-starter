@@ -12,6 +12,7 @@
   "author": "Fleetmatica srl",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.7.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "helmet": "^3.13.0",
