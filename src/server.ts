@@ -17,7 +17,7 @@ app.use(compression())
 
 // BodyParser
 const optionsJson: OptionsJson = {
-  limit: 1,
+  limit: '100kb',
   strict: true, // When set to true, will only accept arrays and objects; when false will accept anything JSON.parse accepts
 }
 app.use(bodyParser.json(optionsJson)); // for parsing application/json
