@@ -3,6 +3,7 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import compression from 'compression'
 import bodyParser, { OptionsJson } from 'body-parser'
+import { errors as celebrateErrors } from 'celebrate'
 import errorHandler from './errorHandler'
 import { load as loadRoutes } from './routes'
 
@@ -26,4 +27,6 @@ loadRoutes(app)
 const appPort = process.env.APP_PORT || 8000
 app.listen(appPort, () => console.log(`Server running on ${appPort}!!!`))
 
+// Errors Handlers
+app.use(celebrateErrors())
 app.use(errorHandler)
