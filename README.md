@@ -15,7 +15,7 @@ git clone https://github.com/Palmabit-IT/typescript-express-jest-starter.git
 Install dependences
 
 ```bash
-yarn install
+npm install
 ```
 
 ### Running
@@ -29,19 +29,19 @@ cp .env.sample .env
 Now you can run app
 
 ```bash
-yarn start
+npm start
 ```
 
 Or, in develop mode
 
 ```bash
-  yarn run dev
+  npm run dev
 ```
 
 ## Running the tests
 
 ```
-  yarn test
+  npm test
 ```
 
 ## Built With

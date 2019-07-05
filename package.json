@@ -1,7 +1,7 @@
 {
-  "name": "fleetmatica-app-tracker-connector",
+  "name": "typescript-express-jest-starter",
   "version": "0.0.1",
-  "description": "Fleetmatica App Tracker Connector",
+  "description": "Typescript Express Jest Starter",
   "main": "index.js",
   "scripts": {
     "start": "node --inspect -r ts-node/register index.ts",
